@@ -5,6 +5,11 @@
 
 用于快速构建高效稳定的`spring-boot`项目
 
+### Branches
+
+- master 单个模块项目，单pom
+- master-multiple-modules 多个模块项目，多pom
+
 ### Properties
 - war或者jar打包运行
 - 统一入参验证
