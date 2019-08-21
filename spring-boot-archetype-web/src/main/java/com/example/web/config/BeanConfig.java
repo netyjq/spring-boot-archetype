@@ -1,4 +1,4 @@
-package com.example.config;
+package com.example.web.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.springframework.boot.bind.RelaxedPropertyResolver;
