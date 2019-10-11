@@ -1,12 +1,14 @@
 package com.example.common.exception;
 
 import com.example.common.enums.ErrorEnum;
+import lombok.Data;
 
 /**
  * 参数异常
  * @author netyjq@gmail.com
  * @date 2019-04-28
  */
+@Data
 public class ParamInvalidException extends AbstractException {
 
     private String field;
@@ -21,11 +23,4 @@ public class ParamInvalidException extends AbstractException {
         this.field = field;
     }
 
-    public String getField() {
-        return field;
-    }
-
-    public void setField(String field) {
-        this.field = field;
-    }
 }

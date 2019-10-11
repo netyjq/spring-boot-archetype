@@ -1,10 +1,9 @@
 package com.example;
 
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 /**
  * SpringBoot 启动类
@@ -12,15 +11,12 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
  * @author netyjq@gmail.com
  */
 @SpringBootApplication
-public class ApplicationBootstrap extends SpringBootServletInitializer {
+@MapperScan("com.example.mapper")
+public class ApplicationBootstrap {
 
     public static void main(String[] args) {
         SpringApplication.run(ApplicationBootstrap.class, args);
     }
 
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(ApplicationBootstrap.class);
-    }
 }
 

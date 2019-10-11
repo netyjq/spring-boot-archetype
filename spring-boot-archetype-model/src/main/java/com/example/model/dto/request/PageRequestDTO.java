@@ -1,6 +1,7 @@
 package com.example.model.dto.request;
 
 import com.example.model.dto.AbstractDTO;
+import lombok.Data;
 import org.hibernate.validator.constraints.Range;
 
 /**
@@ -8,6 +9,7 @@ import org.hibernate.validator.constraints.Range;
  * @date 2017/2/20
  * @author netyjq@gmail.com
  */
+@Data
 public class PageRequestDTO extends AbstractDTO {
 
     private Integer pageNum = 1;
@@ -37,14 +39,6 @@ public class PageRequestDTO extends AbstractDTO {
     public PageRequestDTO(Integer pageNum, Integer pageSize) {
         setPageNum(pageNum);
         setPageSize(pageSize);
-    }
-
-    public Integer getPageNum() {
-        return pageNum;
-    }
-
-    public Integer getPageSize() {
-        return pageSize;
     }
 
     @Override

@@ -18,7 +18,7 @@ public class RequestParamAspect {
 
     /**
      * 对切面 BindingResult类型参数进行校验，基于Hibernate MyValidator
-     * @throws Throwable
+     * @throws Throwable exception
      */
     @Before("execution(* com.example.web.controller.*.*(..))")
     public void doBefore(JoinPoint joinPoint) {

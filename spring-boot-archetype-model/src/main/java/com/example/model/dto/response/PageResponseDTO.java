@@ -1,6 +1,7 @@
 package com.example.model.dto.response;
 
 import com.example.model.dto.request.PageRequestDTO;
+import lombok.Data;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -11,6 +12,7 @@ import java.util.List;
  * @date 2017/6/6.
  * @author netyjq@gmail.com
  */
+@Data
 public class PageResponseDTO<T> implements Serializable {
 
     /**
@@ -37,9 +39,6 @@ public class PageResponseDTO<T> implements Serializable {
      * 总页数
      */
     private Integer totalPage = 1;
-
-    public PageResponseDTO() {
-    }
 
     public PageResponseDTO empty(PageRequestDTO baseDTO) {
         this.setPageSize(baseDTO.getPageSize());
@@ -77,27 +76,18 @@ public class PageResponseDTO<T> implements Serializable {
         return this;
     }
 
-    public Integer getTotal() {
-        return total;
-    }
 
     public PageResponseDTO setTotal(Integer total) {
         this.total = total;
         return this;
     }
 
-    public Integer getPageNo() {
-        return pageNo;
-    }
 
     public PageResponseDTO setPageNo(Integer pageNo) {
         this.pageNo = pageNo;
         return this;
     }
 
-    public Integer getPageSize() {
-        return pageSize;
-    }
 
     public PageResponseDTO setPageSize(Integer pageSize) {
         this.pageSize = pageSize;

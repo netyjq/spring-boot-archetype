@@ -1,6 +1,7 @@
 package com.example.model.dto.request;
 
 import com.example.common.validation.ValidationMarker;
+import lombok.Data;
 
 import javax.validation.constraints.NotNull;
 
@@ -9,6 +10,7 @@ import javax.validation.constraints.NotNull;
  * @date 2017/7/30
  * @author netyjq@gamil.com
  */
+@Data
 public class AppInfoRequestDTO extends PageRequestDTO {
 
     @NotNull(groups = {ValidationMarker.UpdateGroup.class})
@@ -16,22 +18,6 @@ public class AppInfoRequestDTO extends PageRequestDTO {
 
     @NotNull(groups = {ValidationMarker.InsertGroup.class, ValidationMarker.UpdateGroup.class})
     private String name;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     @Override
     public boolean validate() {

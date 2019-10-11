@@ -8,15 +8,17 @@
 ### Branches
 
 - master 单个模块项目，单pom
-- master-multiple-modules 多个模块项目，多pom
+- master-multiple-modules 多个模块项目，多pom  推荐
 
 ### Properties
-- war或者jar打包运行
+- `war`或者`jar`打包运行
 - 统一入参验证
-- 通用Model,Mapper,Service
-- mybatis自动分页
+- 通用`Model`,`Mapper`,`Service`
+- 整合`mybatis-plus3`
+- 整合`swagger-ui`
+- 整合`lombok`
 - 全局异常封装处理
-- logger支持profile
+- `logger`支持`profile`
 - 遵循阿里巴巴Java开发规范
 - 各类实用工具封装
 - ...
