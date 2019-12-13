@@ -8,7 +8,14 @@ import org.springframework.stereotype.Component;
 import org.springframework.validation.BindingResult;
 
 /**
- * 通过aop实现对controller参数的校验
+ * this class used to validate parameters in spring controllers.
+ *
+ * to make sure it works, you must use @Validated annotations and declare a BindingResult Object.
+ * for example :
+ * public ResponseDTO query(@Validated({ValidationMarker.SelectGroup.class}) AppInfoRequestDTO requestDTO, BindingResult result) {
+ *
+ * }
+ *
  * @date 2017/7/24
  * @author netyjq@gmail.com
  */

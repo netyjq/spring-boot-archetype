@@ -11,19 +11,19 @@ import com.example.model.dto.response.ResponseDTO;
 import org.apache.ibatis.exceptions.PersistenceException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindException;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 
 /**
- * 统一异常处理
+ * global exception handler
  * @date 2017/8/16
  * @author netyjq@gmail.com
  */
@@ -32,10 +32,10 @@ public class GlobalExceptionAspect {
 
     private static Logger logger = LoggerFactory.getLogger(GlobalExceptionAspect.class);
 
-    @Autowired
+    @Resource
     private HttpServletRequest request;
 
-    @Autowired
+    @Resource
     HttpServletResponse response;
 
     /**
@@ -87,7 +87,7 @@ public class GlobalExceptionAspect {
     @ExceptionHandler(BindException.class)
     public void bindException(BindException e) {
         BindingResult result = e.getBindingResult();
-        if (result !=null && result.hasErrors()) {
+        if (result.hasErrors()) {
             MyValidator.validateBindResult(result);
         }
     }

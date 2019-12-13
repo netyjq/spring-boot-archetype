@@ -8,7 +8,8 @@ import org.springframework.http.MediaType;
 import java.util.List;
 
 /**
- * FastJsonHttpMessageConverter 配置
+ * fast-json config, you can replace any other http json converter by yourself.
+ *
  * @date 2017/6/19
  * @author netyjq@gmail.com.com
  */

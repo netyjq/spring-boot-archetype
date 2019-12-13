@@ -15,7 +15,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import java.util.List;
 
 /**
- * 应用程序配置
+ * Beans configurations
  * @date 2017/6/7.
  * @author netyjq@gmail.com
  */

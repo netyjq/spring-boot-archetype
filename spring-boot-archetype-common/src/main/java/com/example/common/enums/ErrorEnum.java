@@ -1,10 +1,15 @@
 package com.example.common.enums;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
 /**
  * 前后交互状态码
  * @date 2016/12/8.
  * @author netyjq@gmail.com
  */
+@NoArgsConstructor
+@Getter
 public enum ErrorEnum {
 
     /**
@@ -64,7 +69,7 @@ public enum ErrorEnum {
     }
 
     public ErrorEnum buildMessage(String msg) {
-        this.setMsg(msg);
+        this.msg = msg;
         return this;
     }
 
@@ -73,19 +78,4 @@ public enum ErrorEnum {
         return msg + "." + this.name() +  ", code:" + code;
     }
 
-    public int getCode() {
-        return code;
-    }
-
-    public void setCode(int code) {
-        this.code = code;
-    }
-
-    public String getMsg() {
-        return msg;
-    }
-
-    public void setMsg(String msg) {
-        this.msg = msg;
-    }
 }

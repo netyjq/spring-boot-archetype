@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 通用的Response
+ * common-used response class used to return data to browser by spring controllers.
  * @date 2017/2/20.
  * @author netyjq@gmail.com
  */

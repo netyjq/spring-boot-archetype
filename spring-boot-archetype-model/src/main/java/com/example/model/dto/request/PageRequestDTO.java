@@ -12,10 +12,10 @@ import org.hibernate.validator.constraints.Range;
 @Data
 public class PageRequestDTO extends AbstractDTO {
 
-    private Integer pageNum = 1;
+    private long pageNum = 1;
 
     @Range(min = 0, max = 100)
-    private Integer pageSize = 5;
+    private long pageSize = 5;
 
     public PageRequestDTO() {
     }

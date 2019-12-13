@@ -3,7 +3,7 @@ package com.example.model;
 import java.io.Serializable;
 
 /**
- * 抽象Model基类
+ * abstract database model,used to marked as a database pojo class.
  * @date 2017/6/6.
  * @author netyjq@gmail.com
  */

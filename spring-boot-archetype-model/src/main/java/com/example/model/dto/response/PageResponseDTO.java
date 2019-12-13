@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * PageResponseDTO 封装
+ * common-used response class used to return List data to browser by spring controllers.
  * @date 2017/6/6.
  * @author netyjq@gmail.com
  */
@@ -23,22 +23,22 @@ public class PageResponseDTO<T> implements Serializable {
     /**
      * 数据库几记录总数
      */
-    private Integer total = 0;
+    private long total = 0;
 
     /**
      * 页码
      */
-    private Integer pageNo = 1;
+    private long pageNo = 1;
 
     /**
      * 每页数据大小
      */
-    private Integer pageSize = 1;
+    private long pageSize = 1;
 
     /**
      * 总页数
      */
-    private Integer totalPage = 1;
+    private long totalPage = 1;
 
     public PageResponseDTO empty(PageRequestDTO baseDTO) {
         this.setPageSize(baseDTO.getPageSize());
@@ -49,7 +49,7 @@ public class PageResponseDTO<T> implements Serializable {
         return this;
     }
 
-    public PageResponseDTO(List content, Integer total, int pageNo, int pageSize) {
+    public PageResponseDTO(List content, long total, long pageNo, long pageSize) {
         this.content = content;
         this.total = total;
         this.pageNo = pageNo;
@@ -57,7 +57,7 @@ public class PageResponseDTO<T> implements Serializable {
         this.totalPage = getTotalPage();
     }
 
-    public PageResponseDTO(List content, Integer total, PageRequestDTO baseDTO) {
+    public PageResponseDTO(List content, long total, PageRequestDTO baseDTO) {
         this.content = content;
         this.total = total;
         this.pageNo = baseDTO.getPageNum();
@@ -77,24 +77,24 @@ public class PageResponseDTO<T> implements Serializable {
     }
 
 
-    public PageResponseDTO setTotal(Integer total) {
+    public PageResponseDTO setTotal(long total) {
         this.total = total;
         return this;
     }
 
 
-    public PageResponseDTO setPageNo(Integer pageNo) {
+    public PageResponseDTO setPageNo(long pageNo) {
         this.pageNo = pageNo;
         return this;
     }
 
 
-    public PageResponseDTO setPageSize(Integer pageSize) {
+    public PageResponseDTO setPageSize(long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
 
-    public Integer getTotalPage() {
+    public long getTotalPage() {
         if (this.total == 0 || this.total < pageSize) {
             this.totalPage = 1;
         } else {
