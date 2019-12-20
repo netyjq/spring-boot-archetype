@@ -4,15 +4,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.example.maven.archetypes</groupId>
+    <groupId>com.github.netyjq</groupId>
     <artifactId>spring-boot-archetype</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>spring-boot-archetype-model</module>
-        <module>spring-boot-archetype-mapper</module>
-        <module>spring-boot-archetype-web</module>
-        <module>spring-boot-archetype-service</module>
-        <module>spring-boot-archetype-common</module>
+        <module>archetype-model</module>
+        <module>archetype-mapper</module>
+        <module>archetype-web</module>
+        <module>archetype-service</module>
+        <module>archetype-common</module>
     </modules>
     <packaging>pom</packaging>
 

@@ -1,49 +1,54 @@
-## SpringBoot Maven Archetype 脚手架
+## SpringBoot Maven Archetype
 [![Build Status](https://travis-ci.org/netyjq/spring-boot-archetype.svg?branch=master)](https://travis-ci.org/netyjq/spring-boot-archetype)
+
+[中文文档](https://github.com/netyjq/spring-boot-archetype/blob/master/README-CN.md)
 
 ### Introduction
 
-用于快速构建高效稳定的`spring-boot`项目
+This project is used to quickly build efficient, code-clean and stable 'spring-boot' projects.
 
 ### Properties
-- `war`或者`jar`打包运行
-- 统一入参验证
-- 通用`Model`,`Mapper`,`Service`
-- 整合`mybatis-plus3`
-- 整合`swagger-ui`
-- 整合`lombok`
-- 全局异常封装处理
-- `logger`支持`profile`
-- 遵循阿里巴巴Java开发规范
-- 各类实用工具封装
+- packaged to jar or war according to active profile 
+- Unified `@RequestMapping` input verification
+- `BaseModel`,`BaseMapper`,`BaseService` supported, write code at once
+- `mybatis-plus3` supported
+- `swagger-ui` supported
+- `lombok` supported
+- Global exception encapsulation handling
+- `logger` with `profile` supported
+- Follow the alibaba p3c specification
+- Various utility packages
 - ...
 
 
 ### Usage
 
-你可以直接通过更改本项目包名运行，或者打包成Maven Archetype 脚手架，以便以后新的项目直接使用本套脚手架。
+You can run it directly by changing the project package name, or by packaging it as a maven archetype scaffold so that 
+a new projects can be created with the maven archetype you made.
 
-下面介绍打包Maven Archetype的方式：
+Here's how to package Maven Archetype:
 
-1. `git clone https://github.com/netyjq/spring-boot-archetype.git`
+1. `$ git clone https://github.com/netyjq/spring-boot-archetype.git`
 
-2. 先进入项目目录`cd spring-boot-archetype`，然后`$ mvn clean install -U`
+2. `$ cd spring-boot-archetype`，and then `$ mvn clean install -U`
 
-3. `mvn archetype:create-from-project`
+3. `$ mvn archetype:create-from-project`
 
-4. 进入`target\generated-sources\archetype`，看下`pom` 信息 是否需要修改
+4. `$ cd target\generated-sources\archetype` Check if the 'pom.xml' information needs to be modified, groupId artifactId and version is useful.
 
-5. `mvn clean install`
+5. `$ mvn clean install`, all completed
 
-6. 在`Idea`中 `new project` 界面 选择`create from archetype`， 点击`add Archetype` ， 输入上一步的`pom` 信息
+And how to use Maven Archetype: 
 
-7. 一路按正常流程 Next 直到完成构建
-
+1. Open the Intellij IDEA, click the navigation button: File > new > Project > 
+2. Choose Maven, Check the checkbox "Create from Archetype", then click button "Add Archetype" 
+3. Then you will see a form, just enter the 'pom' information from the previous step.
+4. Select the "Archetype" you just created in the list, step by step, and the new project will automatically complete the build.
 ### Contact
-
-wechat: eWVrYXlqcQ==
+- Gmail: netyjq@gmail.com
+- Wechat: eWVrYXlqcQ==
 
 ### End
-欢迎fork, star。有任何问题请提[issue](https://github.com/netyjq/spring-boot-archetype/issues)，我会全力解决。
+I am glad with your fork or star, any question please submit a [issue](https://github.com/netyjq/spring-boot-archetype/issues).
 
 
