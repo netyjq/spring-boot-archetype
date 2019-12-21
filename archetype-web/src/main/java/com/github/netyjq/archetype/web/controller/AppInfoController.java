@@ -33,7 +33,7 @@ public class AppInfoController {
     @Resource
     private AppInfoService appInfoService;
 
-    @ApiOperation(value = "query", notes = "query AppInfo records to data page")
+    @ApiOperation(value = "query", notes = "query example")
     @RequestMapping(value = "/query", method = RequestMethod.POST)
     public ResponseDTO query(@Validated({ValidationMarker.SelectGroup.class}) AppInfoRequestDTO requestDTO, BindingResult result) {
         IPage<AppInfo> page = appInfoService.page(new Page<>(requestDTO.getPageNum(),  requestDTO.getPageSize()),
@@ -44,12 +44,12 @@ public class AppInfoController {
         return new ResponseDTO(page);
     }
 
-    @ApiOperation(value = "update", notes = "更新")
+    @ApiOperation(value = "update", notes = "update example")
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     public ResponseDTO update(@Validated({ValidationMarker.UpdateGroup.class}) AppInfoRequestDTO appInfoRequestDTO, BindingResult result) {
         AppInfo appInfo = appInfoService.getById(appInfoRequestDTO.getId());
         if (null == appInfo) {
-            throw new ServiceException("没有找到应用记录！");
+            throw new ServiceException("no AppInfo was found.");
         }
         boolean isSuccess = appInfoService.update(appInfo, new UpdateWrapper<AppInfo>()
                 .lambda()
@@ -57,7 +57,7 @@ public class AppInfoController {
                 .eq(AppInfo::getId, appInfoRequestDTO.getId())
         );
         if (!isSuccess) {
-            throw new ServiceException("更新失败！");
+            throw new ServiceException("update failed, please try again later.");
         }
         return new ResponseDTO(appInfoService.list(new QueryWrapper<>()));
     }

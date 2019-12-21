@@ -12,7 +12,7 @@ public abstract class AbstractException extends RuntimeException {
     private String message;
 
     /**
-     * 构建异常信息
+     * build error message
      * @return String
      */
     abstract String buildErrorMessage();

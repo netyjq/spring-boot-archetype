@@ -6,7 +6,7 @@
 
     <groupId>com.github.netyjq</groupId>
     <artifactId>spring-boot-archetype</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.0.1.release</version>
     <modules>
         <module>archetype-model</module>
         <module>archetype-mapper</module>
@@ -15,6 +15,31 @@
         <module>archetype-common</module>
     </modules>
     <packaging>pom</packaging>
+
+    <name>spring-boot-archetype</name>
+    <description>help to quickly build efficient, code-clean and stable 'spring-boot' projects.</description>
+    <url>https://github.com/netyjq/spring-boot-archetype</url>
+
+    <developers>
+        <developer>
+            <name>netyjq</name>
+            <email>netyjq@gmail.com</email>
+            <organization>netyjq</organization>
+            <organizationUrl>https://github.com/netyjq/spring-boot-archetype</organizationUrl>
+        </developer>
+    </developers>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
+
+    <scm>
+        <tag>0.0.1.release</tag>
+        <url>https://github.com/netyjq/spring-boot-archetype</url>
+    </scm>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

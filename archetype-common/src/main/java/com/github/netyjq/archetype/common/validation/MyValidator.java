@@ -12,7 +12,8 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Hibernate参数验证器
+ * Hibernate validator
+ *
  * @date 2017/6/5
  * @author netyjq@gmail.com
  */

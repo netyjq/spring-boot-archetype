@@ -5,18 +5,11 @@
     <parent>
         <artifactId>spring-boot-archetype</artifactId>
         <groupId>com.github.netyjq</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>0.0.1.release</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>archetype-web</artifactId>
-
-    <repositories>
-        <repository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
-        </repository>
-    </repositories>
 
     <build>
         <finalName>spring-boot-archetype</finalName>
@@ -104,7 +97,7 @@
         <dependency>
             <groupId>com.github.netyjq</groupId>
             <artifactId>archetype-service</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>0.0.1.release</version>
         </dependency>
     </dependencies>
 

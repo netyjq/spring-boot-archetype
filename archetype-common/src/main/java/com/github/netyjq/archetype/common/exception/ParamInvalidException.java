@@ -4,7 +4,8 @@ import com.github.netyjq.archetype.common.enums.ErrorEnum;
 import lombok.Data;
 
 /**
- * 参数异常
+ * parameter invalid error
+ *
  * @author netyjq@gmail.com
  * @date 2019-04-28
  */
@@ -19,7 +20,7 @@ public class ParamInvalidException extends AbstractException {
     }
 
     public ParamInvalidException(String field, String message) {
-        super("参数" + field + message);
+        super("parameter: " + field + message);
         this.field = field;
     }
 

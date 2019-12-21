@@ -4,7 +4,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 /**
- * 前后交互状态码
+ * Back and forth interactive status code
+ *
  * @date 2016/12/8.
  * @author netyjq@gmail.com
  */
@@ -13,51 +14,44 @@ import lombok.NoArgsConstructor;
 public enum ErrorEnum {
 
     /**
-     * 请求成功
-     * 200 成功/正常
+     * request successful
      */
-    SUCCESS(200, "请求成功"),
+    SUCCESS(200, "success"),
 
     /**
-     * 业务异常
+     * business error
      */
-    BIZ_ERROR(1000, "业务异常"),
+    BIZ_ERROR(1000, "business error"),
 
     /**
-     * 用户会话异常
+     * session expired
      */
-    SESSION_LOST_ERROR(1001, "用户会话异常"),
+    SESSION_EXPIRED_ERROR(1001, "your session was expired"),
 
     /**
-     * 系统运行期异常
+     * runtime error
      */
-    RUNTIME_ERROR(3000, "系统运行期异常"),
+    RUNTIME_ERROR(3000, "system error, please try again later"),
 
     /**
-     * 前端传入参数错误，一般表现为：参数漏传，类型传错
+     * parameters error
      */
-    WEB_PARAM_ERROR(3001, "入参错误"),
+    WEB_PARAM_ERROR(3001, "parameter error"),
 
     /**
-     * 数据库执行异常
+     * db error
      */
-    DB_EXECUTE_ERROR(3002, "数据库执行异常"),
+    DB_EXECUTE_ERROR(3002, "db error"),
 
     /**
-     * 唯一索引
+     * rpc error
      */
-    DB_UNIQUE_ERROR(3003, "无法操作成功，破坏了数据库唯一索引"),
+    RPC_ERROR(4000, "remote service error"),
 
     /**
-     * RPC服务调用异常
+     * unknown error
      */
-    RPC_ERROR(4000, "系统运行期异常"),
-
-    /**
-     * 系统未知系统
-     */
-    UNKNOWN_ERROR(6000, "系统未知异常");
-
+    UNKNOWN_ERROR(6000, "unknown error");
 
     private int code;
 

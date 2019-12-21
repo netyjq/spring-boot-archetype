@@ -24,6 +24,7 @@ import java.sql.SQLException;
 
 /**
  * global exception handler
+ *
  * @date 2017/8/16
  * @author netyjq@gmail.com
  */
@@ -76,7 +77,7 @@ public class GlobalExceptionAspect {
 
     @ExceptionHandler(SessionInvalidException.class)
     public void sessionInvalidException(SessionInvalidException e) {
-        writeToClient(ErrorEnum.SESSION_LOST_ERROR.buildMessage(e.getMessage()), e);
+        writeToClient(ErrorEnum.SESSION_EXPIRED_ERROR.buildMessage(e.getMessage()), e);
     }
 
 

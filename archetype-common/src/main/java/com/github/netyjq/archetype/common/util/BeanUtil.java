@@ -14,15 +14,16 @@ import java.util.*;
 import java.util.stream.IntStream;
 
 /**
- * 对象转换工具
+ * Bean util
+ *
  * @date 2017/6/6.
  * @author netyjq@gmail.com
  */
 public class BeanUtil {
 
     /**
-     * 将bean转成 Map<String,Object>
-     * @param object 传入对象
+     * convert bean to Map<String,Object>
+     * @param object bean
      * @return Map<String, Object>
      */
     public static Map<String, Object> transBeanToMap(Object object) {
@@ -35,9 +36,7 @@ public class BeanUtil {
             PropertyDescriptor[] propertyDescriptors = beanInfo.getPropertyDescriptors();
             for (PropertyDescriptor property : propertyDescriptors) {
                 String key = property.getName();
-                // 过滤class属性
                 if (!"class".equals(key)) {
-                    // 得到property对应的getter方法
                     Method getter = property.getReadMethod();
                     Object value = getter.invoke(object);
                     map.put(key, value);
@@ -50,9 +49,9 @@ public class BeanUtil {
     }
 
     /**
-     * 将bean转成 Map<String,Object>
-     * @param source 传入对象
-     * @param properties 属性
+     * convert bean to Map<String,Object> with specified fields
+     * @param source bean
+     * @param properties fields
      * @return
      */
     public static Map<String, Object> transBeanToMap(Object source, String properties) {

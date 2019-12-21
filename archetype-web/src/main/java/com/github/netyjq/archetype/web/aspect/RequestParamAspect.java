@@ -24,10 +24,9 @@ import org.springframework.validation.BindingResult;
 public class RequestParamAspect {
 
     /**
-     * 对切面 BindingResult类型参数进行校验，基于Hibernate MyValidator
-     * @throws Throwable exception
+     * Verify the section BindingResult type parameter based on Hibernate MyValidator
      */
-    @Before("execution(* com.example.web.controller.*.*(..))")
+    @Before("execution(* com.github.netyjq.archetype.web.controller.*.*(..))")
     public void doBefore(JoinPoint joinPoint) {
         Object [] args = joinPoint.getArgs();
         for (Object object : args) {

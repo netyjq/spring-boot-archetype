@@ -1,6 +1,8 @@
 package com.github.netyjq.archetype.common.validation;
 
 /**
+ * this used with @Validate
+ *
  * @author netyjq@gmail.com
  * @date 2019-04-28
  */
