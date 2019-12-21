@@ -4,7 +4,7 @@
 
   <groupId>com.github.netyjq</groupId>
   <artifactId>spring-boot-archetype</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
 
   <name>spring-boot-archetype-archetype</name>
@@ -147,7 +147,7 @@
   </licenses>
 
   <scm>
-    <tag>spring-boot-archetype-0.0.1</tag>
+    <tag>0.0.1.release</tag>
     <url>https://github.com/netyjq/spring-boot-archetype</url>
     <connection>scm:git:git://github.com/netyjq/spring-boot-archetype.git</connection>
   </scm>
