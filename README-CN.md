@@ -3,7 +3,8 @@
 
 ### 简介
 
-用于快速构建高效、代码干净且稳定的“spring-boot”项目。
+ **`spring-boot-archetype`** 是一个maven脚手架，用于快速构建高效、代码干净且稳定的`spring-boot`项目。只要您安装了`Maven`，
+ 或者您使用`Intellij IDEA`进行编码，只需简单的几个步骤，就能基于 **`spring-boot-archetype`** 构建一个新的`spring-boot`项目。
 
 ### 特性
 - `war`或者`jar`支持`maven profile`打包运行 
@@ -18,31 +19,33 @@
 - 各类实用工具封装
 - ...
 
+### Maven依赖坐标信息
+
+```xml
+<dependency>
+  <groupId>com.github.netyjq</groupId>
+  <artifactId>spring-boot-archetype</artifactId>
+  <version>0.0.2.release</version>
+</dependency>
+```
 
 ### 使用
 
-你可以直接通过更改本项目包名运行，或者打包成Maven Archetype 脚手架，以便以后新的项目直接使用本套脚手架。
+#### 通过`Maven`命令行创建新项目
 
-下面介绍打包Maven Archetype的方式：
+确保你已经安装了`Maven`，然后在你的终端上输入下面的命令，一段时间后，maven会提示你输入你的项目的`groupId`、`artifactId`、`version`、
+`package`，之后你的项目就会自动构建成功。
 
-#### 打包Maven Archetype
+```
+mvn archetype:generate -DarchetypeGroupId=com.github.netyjq -DarchetypeArtifactId=spring-boot-archetype -DarchetypeVersion=0.0.2.release
+```
 
-1. `$ git clone https://github.com/netyjq/spring-boot-archetype.git`
+#### 通过 `Intellij IDEA` 创建新项目
 
-2. `$ cd spring-boot-archetype`，然后执行 `$ mvn clean install -U`
-
-3. `$ mvn archetype:create-from-project`
-
-4. `$ cd target\generated-sources\archetype`，查看`pom.xml`文件信息，可以更改成你乐意的，groupId, artifactId, version，这三个信息后面会用到。
-
-5. `$ mvn clean install` OK 完成了
-
-#### 使用Maven Archetype
-
-1. 打开Intellij IDEA，点击导航按钮:文件>新建>项目>
-2. 选择Maven，选中复选框"Create from Archetype"，然后点击按钮 "Add Archetype" 
-3. 然后您将看到一个表单，只需输入来自上面你填写的“pom”信息。
-4. 在列表中选择你刚刚创建的 "Archetype"，逐步创建项目，新项目将自动完成构建。
+1. 打开 `Intellij IDEA`，点击导航按钮:文件>新建>项目>
+2. 选择Maven，选中复选框 "Create from Archetype"，然后点击按钮 "Add Archetype" 
+3. 然后您将看到一个表单，只需输入上面的Maven坐标信息 。
+4. 在列表中选择你刚刚添加 "Archetype"，逐步创建项目，新项目将自动完成构建。
 ### Contact
 - Gmail: netyjq@gmail.com
 - Wechat: eWVrYXlqcQ==

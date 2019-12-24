@@ -5,7 +5,9 @@
 
 ### Introduction
 
-This project is used to quickly build efficient, code-clean and stable 'spring-boot' projects.
+**`spring-boot-archetype`** is a maven scaffold for quickly building efficient, clean, and stable `spring-boot` projects. 
+As long as you have `Maven` installed, or you encode using `Intellij IDEA`, you can build a new `spring-boot` project 
+based on **`spring-boot-archetype`** in a few simple steps.
 
 ### Properties
 - packaged to jar or war according to active profile 
@@ -20,30 +22,35 @@ This project is used to quickly build efficient, code-clean and stable 'spring-b
 - Various utility packages
 - ...
 
+### Maven Dependency
+
+```xml
+<dependency>
+  <groupId>com.github.netyjq</groupId>
+  <artifactId>spring-boot-archetype</artifactId>
+  <version>0.0.2.release</version>
+</dependency>
+```
 
 ### Usage
 
-You can run it directly by changing the project package name, or by packaging it as a maven archetype scaffold so that 
-a new projects can be created with the maven archetype you made.
+#### Use with maven command-line
 
-Here's how to package Maven Archetype:
+Make sure you have already installed maven, and then type the command below to your terminal,
 
-1. `$ git clone https://github.com/netyjq/spring-boot-archetype.git`
+after a while, maven will tips you input your project's `groupId`, `artifactId`, `version`, `package`, then your project will be automatically built successfully.
 
-2. `$ cd spring-boot-archetype`，and then `$ mvn clean install -U`
-
-3. `$ mvn archetype:create-from-project`
-
-4. `$ cd target\generated-sources\archetype` Check if the 'pom.xml' information needs to be modified, groupId artifactId and version is useful.
-
-5. `$ mvn clean install`, all completed
-
-And how to use Maven Archetype: 
+```
+mvn archetype:generate -DarchetypeGroupId=com.github.netyjq -DarchetypeArtifactId=spring-boot-archetype -DarchetypeVersion=0.0.2.release
+```
+ 
+#### Use with Intellij IDEA  
 
 1. Open the Intellij IDEA, click the navigation button: File > new > Project > 
 2. Choose Maven, Check the checkbox "Create from Archetype", then click button "Add Archetype" 
-3. Then you will see a form, just enter the 'pom' information from the previous step.
-4. Select the "Archetype" you just created in the list, step by step, and the new project will automatically complete the build.
+3. Then you will see a form, just enter the 'pom' information.
+4. Select the "Archetype" you just added in the list, step by step, and the new project will automatically complete the build.
+
 ### Contact
 - Gmail: netyjq@gmail.com
 - Wechat: eWVrYXlqcQ==

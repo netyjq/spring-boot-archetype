@@ -5,14 +5,13 @@
     <parent>
         <artifactId>spring-boot-archetype</artifactId>
         <groupId>com.github.netyjq</groupId>
-        <version>0.0.1.release</version>
+        <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>archetype-service</artifactId>
+    <artifactId>spring-boot-archetype-service</artifactId>
 
     <build>
-        <finalName>spring-boot-archetype</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -30,8 +29,8 @@
     <dependencies>
         <dependency>
             <groupId>com.github.netyjq</groupId>
-            <artifactId>archetype-mapper</artifactId>
-            <version>0.0.1.release</version>
+            <artifactId>spring-boot-archetype-mapper</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
