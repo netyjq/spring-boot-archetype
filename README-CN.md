@@ -44,8 +44,11 @@ mvn archetype:generate -DarchetypeGroupId=com.github.netyjq -DarchetypeArtifactI
 
 1. 打开 `Intellij IDEA`，点击导航按钮:文件>新建>项目>
 2. 选择Maven，选中复选框 "Create from Archetype"，然后点击按钮 "Add Archetype" 
-3. 然后您将看到一个表单，只需输入上面的Maven坐标信息 。
+3. 然后您将看到一个表单，依次填写`groupId`、`artifactId`、`version`，Maven坐标信息上面有 。
 4. 在列表中选择你刚刚添加 "Archetype"，逐步创建项目，新项目将自动完成构建。
+
+**注意：Add Archetype 步骤只需执行一次，以后可直接选择 spring-boot-archetype:0.0.2.release**
+
 ### Contact
 - Gmail: netyjq@gmail.com
 - Wechat: eWVrYXlqcQ==
