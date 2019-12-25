@@ -3,11 +3,11 @@
 
 ### 简介
 
- **`spring-boot-archetype`** 是一个maven脚手架，用于快速构建高效、代码干净且稳定的`spring-boot`项目。只要您安装了`Maven`，
+ **`spring-boot-archetype`** 是一个maven脚手架，用于快速构建高效、稳定且代码干净的`spring-boot`项目。只要您安装了`Maven`，
  或者您使用`Intellij IDEA`进行编码，只需简单的几个步骤，就能基于 **`spring-boot-archetype`** 构建一个新的`spring-boot`项目。
 
 ### 特性
-- `war`或者`jar`支持`maven profile`打包运行 
+- 支持`maven profile`动态打包`war`或者`jar`运行 
 - 控制层统一入参验证
 - 通用`Model`，`Mapper`，`Service` 让你立马开始写业务代码
 - 整合`mybatis-plus3`
@@ -47,7 +47,7 @@ mvn archetype:generate -DarchetypeGroupId=com.github.netyjq -DarchetypeArtifactI
 3. 然后您将看到一个表单，依次填写`groupId`、`artifactId`、`version`，Maven坐标信息上面有 。
 4. 在列表中选择你刚刚添加 "Archetype"，逐步创建项目，新项目将自动完成构建。
 
-**注意：Add Archetype 步骤只需执行一次，以后可直接选择 spring-boot-archetype:0.0.2.release**
+**注意：Add Archetype 步骤只需执行一次，以后可直接选择 `spring-boot-archetype:0.0.2.release`**
 
 ### Contact
 - Gmail: netyjq@gmail.com
